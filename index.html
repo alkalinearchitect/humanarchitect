@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Human Architect — the world of self-mastery</title>
+  <meta name="description" content="Scroll to fly through the world of Human Architect: from fog to vitality." />
+  <style>
+    :root, .sw-root {
+      --sw-bg: #0c0814;          /* deep violet-night, matches scene bg */
+      --sw-ink: #f3eefb;
+      --sw-ink-soft: #9a8fb8;
+      --sw-accent: #7A5CFF;      /* violet owns the world */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--sw-bg); }
+    #world { min-height: 100vh; }
+    .ha-tag { position: fixed; top: 14px; right: 14px; z-index: 50;
+      font: 10px/1.3 -apple-system, system-ui, sans-serif; color: #7a6ca8;
+      background: #160f29cc; border: 1px solid #2a2142; padding: 6px 10px;
+      border-radius: 8px; letter-spacing: .3px; }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+  <div class="ha-tag">FREE build · your own footage · no Higgsfield</div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: 'Human Architect', href: '#top' },
+      cta: { label: 'Begin the protocol', href: '#top' },
+      hint: 'scroll to fly in',
+      diveScroll: 1.3,
+      connScroll: 0.9,
+      atmosphere: true,
+      nav: true,
+      sections: [
+        {
+          id: 'fog', label: 'The Fog',
+          still: 'assets/fog.webp',
+          clip: 'assets/vid/fog.mp4',
+          accent: '#5b5170',
+          eyebrow: 'Where most men live',
+          title: 'The fog comes first.',
+          body: 'Low energy, scattered focus, a body running on fumes. This is the baseline — not a moral failing, just a depleted system.',
+          tags: ['Fatigue', 'Brain fog', 'Drift'],
+        },
+        {
+          id: 'purge', label: 'The Purge',
+          still: 'assets/purge.jpg',
+          clip: 'assets/vid/purge.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'Step one',
+          title: 'Clear the mucus.',
+          body: 'The mucusless protocol strips the sludge. Less congestion, clearer breath, a system that can finally move.',
+          tags: ['Detox', 'Mucusless', 'Breath'],
+        },
+        {
+          id: 'blood', label: 'The Blood',
+          still: 'assets/blood.jpg',
+          clip: 'assets/vid/blood.mp4',
+          accent: '#C41E3A',
+          eyebrow: 'Step two',
+          title: 'Clean the blood.',
+          body: 'Circulation is the delivery network. Better blood quality means every cell gets what it needs — and drops what it does not.',
+          tags: ['Circulation', 'HRV', 'Oxygen'],
+        },
+        {
+          id: 'discipline', label: 'The Discipline',
+          still: 'assets/discipline.jpg',
+          clip: 'assets/vid/discipline.mp4',
+          accent: '#9B7EBD',
+          eyebrow: 'Step three',
+          title: 'Hold the line.',
+          body: 'Semen retention is not mysticism — it is redirected drive. Self-accountability is the only external enemy you need to defeat.',
+          tags: ['Retention', 'Drive', 'Ownership'],
+        },
+        {
+          id: 'vitality', label: 'The Vitality',
+          still: 'assets/vitality.jpg',
+          clip: 'assets/vid/vitality.mp4',
+          accent: '#27c93f',
+          eyebrow: 'The payoff',
+          title: 'The numbers climb.',
+          body: 'HRV up. Resting heart rate down. Sleep deeper. The data stops being a scoreboard and becomes proof.',
+          tags: ['HRV', 'Recovery', 'Proof'],
+        },
+        {
+          id: 'finale', label: 'The Architect',
+          still: 'assets/architect.jpg',
+          clip: 'assets/vid/vitality.mp4',
+          accent: '#7A5CFF',
+          eyebrow: 'And it all builds into',
+          title: 'You, the Architect.',
+          body: 'Not improved. Rebuilt. A man who owns his system and engineers his own vitality — one protocol at a time.',
+          tags: [],
+          cta: { primary: { label: 'Get the protocol', href: '#top' },
+                 secondary: { label: 'Read the stack', href: '#top' } },
+        },
+      ],
+      // No connector files: engine crossfades between dives (graceful, no pop).
+      connectors: [],
+    });
+  </script>
+</body>
+</html>
